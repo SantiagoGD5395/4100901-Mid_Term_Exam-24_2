@@ -1,11 +1,14 @@
 // uart.h
+
 #ifndef UART_H
 #define UART_H
 
 #include <stdint.h>
 
 // Base addresses for USART peripherals
+#define USART1_BASE  0x40013800UL
 #define USART2_BASE  0x40004400UL
+#define USART3_BASE  0x40004800UL
 
 // Define USART_TypeDef structure to match hardware registers
 typedef struct {

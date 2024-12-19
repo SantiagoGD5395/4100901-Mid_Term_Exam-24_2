@@ -1,5 +1,5 @@
 // Access Control System Implementation
-
+#include <stdint.h>
 #include "gpio.h"
 #include "systick.h"
 #include "uart.h"
@@ -15,7 +15,7 @@ typedef enum {
 static DoorState_t current_state = LOCKED;
 static uint32_t unlock_timer = 0;
 
-static run_state_machine(void) {
+static run_state_machine(void){
     switch (current_state) {
         case LOCKED:
             // No periodic action in locked state
@@ -88,4 +88,5 @@ int main(void) {
 
         run_state_machine();
     }
+
 }
